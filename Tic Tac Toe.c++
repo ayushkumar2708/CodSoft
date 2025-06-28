@@ -1,17 +1,17 @@
 #include <iostream>
 using namespace std;
 
-char board[3][3]; // 3x3 Tic Tac Toe board
+char board[3][3]; 
 char currentPlayer = 'X';
 
-// Function to initialize the board
+
 void initializeBoard() {
     for (int i = 0; i < 3; i++)
         for (int j = 0; j < 3; j++)
-            board[i][j] = '1' + i * 3 + j; // Fill with 1–9 characters
+            board[i][j] = '1' + i * 3 + j; 
 }
 
-// Function to display the board
+
 void printBoard() {
     cout << "\n";
     for (int i = 0; i < 3; i++) {
@@ -26,12 +26,12 @@ void printBoard() {
     cout << "\n";
 }
 
-// Function to switch players
+
 void switchPlayer() {
     currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
 }
 
-// Function to make a move
+
 bool makeMove(int cell) {
     if (cell < 1 || cell > 9) return false;
     int row = (cell - 1) / 3;
@@ -41,9 +41,8 @@ bool makeMove(int cell) {
     return true;
 }
 
-// Function to check for a win
 bool checkWin() {
-    // Check rows, columns, and diagonals
+   
     for (int i = 0; i < 3; i++)
         if (board[i][0] == currentPlayer &&
             board[i][1] == currentPlayer &&
@@ -69,7 +68,7 @@ bool checkWin() {
     return false;
 }
 
-// Function to check for a draw
+
 bool checkDraw() {
     for (int i = 0; i < 3; i++)
         for (int j = 0; j < 3; j++)
@@ -78,7 +77,7 @@ bool checkDraw() {
     return true;
 }
 
-// Main function
+
 int main() {
     initializeBoard();
     int move;
