@@ -6,7 +6,7 @@
 using namespace std;
 
 int main() {
-    srand(time(0)); // Seed for random number generation
+    srand(time(0)); 
     const int maxAttempts = 5;
     int score = 0;
     string playAgain;
