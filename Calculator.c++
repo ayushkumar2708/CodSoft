@@ -1,5 +1,5 @@
 #include <iostream>
-#include <iomanip> // for setprecision
+#include <iomanip> 
 
 using namespace std;
 
@@ -35,7 +35,7 @@ int main() {
             case '/':
                 if (num2 != 0) {
                     result = num1 / num2;
-                    cout << fixed << setprecision(2); // format to 2 decimal places
+                    cout << fixed << setprecision(2); 
                     cout << "Result: " << result << endl;
                 } else {
                     cout << "Error: Cannot divide by zero.\n";
